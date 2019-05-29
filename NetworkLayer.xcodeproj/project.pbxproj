@@ -12,6 +12,11 @@
 		3A277579229E81400008228B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A277577229E81400008228B /* Main.storyboard */; };
 		3A27757B229E81440008228B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A27757A229E81440008228B /* Assets.xcassets */; };
 		3A27757E229E81440008228B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A27757C229E81440008228B /* LaunchScreen.storyboard */; };
+		4AB0F29E229E9F6F00D3D32F /* CurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB0F29D229E9F6F00D3D32F /* CurrencyTableViewCell.swift */; };
+		4AB0F2A0229EA04B00D3D32F /* NetworkConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB0F29F229EA04B00D3D32F /* NetworkConnection.swift */; };
+		4AB0F2A2229EA54E00D3D32F /* MyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB0F2A1229EA54E00D3D32F /* MyViewModel.swift */; };
+		4AB0F2A5229EA72E00D3D32F /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB0F2A4229EA72E00D3D32F /* Currency.swift */; };
+		4AB0F2A7229EA73B00D3D32F /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB0F2A6229EA73B00D3D32F /* Rate.swift */; };
 		F4D79D199F8034A7383B4643 /* Pods_NetworkLayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C8412222698108CC14C0842A /* Pods_NetworkLayer.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +29,11 @@
 		3A27757A229E81440008228B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A27757D229E81440008228B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A27757F229E81440008228B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AB0F29D229E9F6F00D3D32F /* CurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyTableViewCell.swift; sourceTree = "<group>"; };
+		4AB0F29F229EA04B00D3D32F /* NetworkConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConnection.swift; sourceTree = "<group>"; };
+		4AB0F2A1229EA54E00D3D32F /* MyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyViewModel.swift; sourceTree = "<group>"; };
+		4AB0F2A4229EA72E00D3D32F /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		4AB0F2A6229EA73B00D3D32F /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
 		BF478855394C67644C1F2E81 /* Pods-NetworkLayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkLayer.release.xcconfig"; path = "Target Support Files/Pods-NetworkLayer/Pods-NetworkLayer.release.xcconfig"; sourceTree = "<group>"; };
 		C8412222698108CC14C0842A /* Pods_NetworkLayer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkLayer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -61,14 +71,51 @@
 		3A277572229E81400008228B /* NetworkLayer */ = {
 			isa = PBXGroup;
 			children = (
+				4AB0F2A3229EA71A00D3D32F /* Model */,
+				4AB0F29C229E9D8D00D3D32F /* View */,
+				4AB0F29B229E9D7E00D3D32F /* Service */,
+				4AB0F29A229E9D6F00D3D32F /* ViewModel */,
 				3A277573229E81400008228B /* AppDelegate.swift */,
-				3A277575229E81400008228B /* ViewController.swift */,
-				3A277577229E81400008228B /* Main.storyboard */,
 				3A27757A229E81440008228B /* Assets.xcassets */,
 				3A27757C229E81440008228B /* LaunchScreen.storyboard */,
 				3A27757F229E81440008228B /* Info.plist */,
 			);
 			path = NetworkLayer;
+			sourceTree = "<group>";
+		};
+		4AB0F29A229E9D6F00D3D32F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4AB0F2A1229EA54E00D3D32F /* MyViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4AB0F29B229E9D7E00D3D32F /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4AB0F29F229EA04B00D3D32F /* NetworkConnection.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		4AB0F29C229E9D8D00D3D32F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3A277575229E81400008228B /* ViewController.swift */,
+				3A277577229E81400008228B /* Main.storyboard */,
+				4AB0F29D229E9F6F00D3D32F /* CurrencyTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4AB0F2A3229EA71A00D3D32F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4AB0F2A4229EA72E00D3D32F /* Currency.swift */,
+				4AB0F2A6229EA73B00D3D32F /* Rate.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		585455EB248B277F23A4EEBE /* Pods */ = {
@@ -77,7 +124,6 @@
 				0589FA1C35F9BA768E0020DC /* Pods-NetworkLayer.debug.xcconfig */,
 				BF478855394C67644C1F2E81 /* Pods-NetworkLayer.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -215,8 +261,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AB0F2A5229EA72E00D3D32F /* Currency.swift in Sources */,
+				4AB0F2A0229EA04B00D3D32F /* NetworkConnection.swift in Sources */,
 				3A277576229E81400008228B /* ViewController.swift in Sources */,
+				4AB0F2A7229EA73B00D3D32F /* Rate.swift in Sources */,
+				4AB0F29E229E9F6F00D3D32F /* CurrencyTableViewCell.swift in Sources */,
 				3A277574229E81400008228B /* AppDelegate.swift in Sources */,
+				4AB0F2A2229EA54E00D3D32F /* MyViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
